@@ -13,7 +13,7 @@ class MyPureComponent extends Component {
     console.log('MyPure 새로고침');
   }
   render() {
-    return <div>d</div>;
+    return <div>woosun</div>;
   }
 }
 class App extends Component {
