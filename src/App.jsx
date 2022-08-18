@@ -1,44 +1,31 @@
 import React, { Component } from 'react';
-// import reactDom from 'react-dom';
-class MyComponent extends Component {
-  componentDidUpdate() {
-    console.log('Mycomponent 새로고치');
-  }
-  render() {
-    return <div>d</div>;
-  }
-}
-class MyPureComponent extends Component {
-  componentDidUpdate() {
-    console.log('MyPure 새로고침');
-  }
-  render() {
-    return <div>woosun</div>;
-  }
-}
+import Counter3 from './03/Counter3';
+import CounterApp from './03/CounterApp';
+import Input from './03/Input';
+import ScrollSpy from './03/ScrollSpy';
+// import ListEx from './03/ListEx';
+// import SFC from './03/SFC';
+// import TodaysPlanApp from './03/TodaysPlanApp';
+import Todolist from './03/Todolist';
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.listV = [{ name: 'pakr' }, { name: 'Lee' }];
-    this.state = { verstion: 0 };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    setTimeout(() => {
-      this.listV[0].name = 'Justin';
-      this.setState({ verstion: 1 });
-    }, 100);
-    setTimeout(() => {
-      this.listV = [{ name: 'Justin' }, { name: 'Lee' }];
-      this.setState({ verstion: 2 });
-    }, 200);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
+
   render() {
     return (
       <div className="body">
-        <MyComponent value={this.listV} />
-        <MyPureComponent value={this.listV} />
-        <button onClick={this.handleClick}>butttt</button>
+        {/* <SFC somePropV={123} /> */}
+        {/* <TodaysPlanApp hasPlan={true} /> */}
+        {/* <ListEx /> */}
+        {/* <Todolist /> */}
+        {/* <CounterApp /> */}
+        {/* <ScrollSpy /> */}
+        {/* <Counter3 /> */}
+        <Input name="a" autoFocus={true} />
+        <Input name="myii" label="gggg" />
+        <Input name="myii2" value="dpd" />
+        <Input name="myii3" value="dpd" type="number" errorMessage={'숫자만 입력'} />
       </div>
     );
   }
